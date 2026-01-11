@@ -5,11 +5,11 @@ from backtesting.lib import crossover
 
 class SmaCross(Strategy):
     # ค่า default (เปลี่ยนได้ตอน optimize)
-    n1 = 10   # short SMA window
+    n1 = 8   # short SMA window
     n2 = 20   # long SMA window
 
-    SL = None   # Stop loss เช่น 0.05 (5%)
-    TP = None   # Take profit เช่น 0.10 (10%)
+    SL = 0.05   # Stop loss เช่น 0.05 (5%)
+    TP = 0.10   # Take profit เช่น 0.10 (10%)
 
     def init(self):
         close = pd.Series(self.data.Close)
